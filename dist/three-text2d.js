@@ -35,7 +35,6 @@ var CanvasText = (function () {
       this.ctx.fillStyle = ctxOptions.fillStyle;
       this.ctx.textAlign = 'left';
       this.ctx.textBaseline = 'top';
-      console.log(text, this.ctx.font, this.ctx.fillStyle, this.textWidth, this.textHeight, this.canvas.width, this.canvas.height);
 
       this.ctx.fillText(text, 0, 0);
 
@@ -253,8 +252,6 @@ var Text2D = (function (_THREE$Object3D) {
     key: 'updateText',
     value: function updateText() {
       this.cleanUp(); // cleanup previous texture
-
-      console.log(this._text, "font:", this._font, "fillStyle:", this._fillStyle);
 
       this.canvas.drawText(this._text, {
         font: this._font,
